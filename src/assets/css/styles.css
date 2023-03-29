@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+ body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+ }
+ 
+ a {
+    text-decoration: none;
+    color: #333;
+ }
+ 
+ ul {
+    list-style: none;
+ }
+ 
+ .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+ }
+ 
+ /* Header Styles */
+ header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+ }
+ 
+ nav ul {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+ }
+ 
+ nav ul li a {
+    font-weight: bold;
+    margin-right: 30px;
+ }
+ 
+ /* Hero Styles */
+ .hero {
+    
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+ }
+
+ .banner1{
+   background-image: url("../images/banner3.jpg");
+ }
+
+ .banner2{
+   background-image: url("../images/banner2.jpg");
+ }
+
+ .banner3{
+   background-image: url("../images/banner.jpg");
+ }
+ 
+ .hero-content {
+    text-align: center;
+    color: black;
+ }
+ 
+ .hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+ }
+ 
+ .hero-content p {
+    max-width: 500px;
+    margin: 0 auto 20px;
+ }
+ 
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%; /* position the arrows vertically in the center */
+  transform: translateY(-50%);
+  z-index: 1; /* give the arrows a higher z-index than the banner image */
+  width: 40px; /* adjust the size of the arrows if needed */
+  height: 40px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3); /* add a semi-transparent background */
+  border-radius: 50%; /* make the arrows round */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.slick-prev {
+   left: 0 !important; /* position the previous arrow to the left */
+ }
+ 
+ .slick-next {
+   right: 0 !important; /* position the next arrow to the right */
+ }
+
+/*Pagination*/
+
+.pagination{
+   /* box-shadow: 0 5px 10px rgba(0,0,0,0.2); */
+   border-radius: 5px;
+   width: 10%;
+   height: 50px;
+   background-color: transparent;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.pagination button{
+   background-color: transparent;
+   border: none;
+   width: 20px;
+   font-size: 16px;
+   font-weight: 500;
+   margin-right: 0.5rem;
+   cursor: pointer;
+}
+
+.pagination button:hover{
+   border-radius: 5px;
+   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+   
+}
+
+.pagination button:hover:not(.active):not(:disabled){ 
+   border: 1px solid #ea4c89;
+   
+ }
+
+ .pagination button:disabled {
+   display: none !important;
+ }
+
+ 
+
+.pagination button.active{
+   
+   color: #ea4c89;
+   border-radius: 5px;
+   scale: 1.2;
+}
+
+.pagination button:focus {
+   outline: none;
+ }
+
+.pagination #fw,
+.pagination #back{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+ 
+ /* Featured Styles */
+ .featured {
+    padding: 50px;
+ }
+ 
+ .featured h2 {
+    text-align: center;
+    margin-bottom: 50px;
+ }
+ 
+ .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+ }
+ 
+ .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    margin: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    
+ }
+ 
+ .card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+ }
+ 
+ .card-content {
+    text-align: center;
+ }
+ 
+ .card-content h3 {
+    margin-bottom: 10px;
+ }
+ 
+ .card-content p {
+    margin-bottom: 20px;
+    font-weight: bold;
+ }
+
+/*Main container*/
+
+.container{
+   display: flex;
+   width: 100%;
+   height: 70vh;
+   margin-top: 5px;
+   padding-top: 10px;
+   padding-right: 10px ;
+   padding-left: 10px;
+   transition: 0.3s ease;
+   align-items: center;
+   justify-content: center;
+}
+
+
+.main_img{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.sunglasses_container{
+   background-image: url("../images/sunglasses.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   margin-right: 3px;
+}
+
+.sunglasses_container:hover,
+.perfumes_container:hover{
+   opacity: 0.5;
+}
+
+/* Target the cta div that comes after the hovered sunglasses_container div */
+.sunglasses_container:hover > .cta_sunglasses{
+   display: flex;
+}
+
+.perfumes_container{
+   background-image: url("../images/perfumes.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   margin-left: 3px;
+}
+
+/* Target the cta div that comes after the hovered perfumes_container div */
+.perfumes_container:hover > .cta_perfumes{
+   display: flex;
+}
+
+.cta{
+   background-color: #f2f2f2;
+   border-radius: 50%;
+   height: 150px;
+   width: 150px;
+   display: none;
+   position: absolute;
+}
+
+.cta_sunglasses, .cta_perfumes{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: black;
+   font-size: 20px;
+   display: none;
+   text-transform: uppercase;
+}
+
+/*Footer*/
+
+.footer{
+   background-color: #f2f2f2;
+   padding-left: 10px;
+   padding-right: 10px;
+}
